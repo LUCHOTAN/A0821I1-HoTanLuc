@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="width: 300px">
+    <tr>
+        <td>AMOUNT</td>
+        <td>FROM CURRENCY</td>
+        <td>TO CURRENCY</td>
+        <td> </td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td><input placeholder="nhập số tiền" style="width: 200px" id="solieunhap"></td>
+        <td>
+            <select style="width: 200px" id="from">
+            <option value="VND">Việt Nam</option>
+                <option value="USD">Mỹ</option>
+        </td>
+        <td>
+            <select style="width: 200px" id="to">
+                <option value="VND">Việt Nam</option>
+                <option value="USD" >Mỹ</option>
+        </td>
+        <td><button id="Convert" onclick="chuyendoi()">Chuyển đổi</td>
+        <td id="KQ">Kết quả</td>
+    </tr>
+</table>
+<script>
+    function chuyendoi(){
+        let nhap = document.getElementById("solieunhap").value
+        let from = document.getElementById("from").value
+        let to = document.getElementById("to").value
+        let result;
+        if (from === "VND" && to === "USD"){
+            result = nhap/23000 + "USD"
+        }
+        else if (from === "USD" && to === "VND"){
+            result = nhap*23000 + "VND"
+        }
+        else{
+            result = nhap
+        }
+        document.getElementById("KQ").innerText = result
+    }
+</script>
+
+</body>
+</html>

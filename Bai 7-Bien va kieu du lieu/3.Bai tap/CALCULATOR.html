@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>CALCULATOR</h1>
+<input id="soa" placeholder="nhập số">
+<input id="sob" placeholder="nhập số"> <br> <br>
+<button id="cong" onclick="cong()">Additon(+)</button>
+<button id="tru" onclick="tru()">Subtraction(-)</button>
+<button id="nhan" onclick="nhan()">Multiplication(x)</button>
+<button id="chia" onclick="chia()">Division(/)</button> <br> <br>
+<p id="ketqua">Kết quả</p>
+<script>
+    function cong(){
+          let a = parseFloat(document.getElementById("soa").value)
+          let b = parseFloat(document.getElementById("sob").value)
+          let result = a + b;
+               document.getElementById("ketqua").innerText = "Result Addition: " + result
+    }
+    function tru(){
+        let a = parseFloat(document.getElementById("soa").value)
+        let b = parseFloat(document.getElementById("sob").value)
+        let result = a - b;
+        document.getElementById("ketqua").innerText = "Result Subtraction: " + result
+    }
+    function nhan(){
+        let a = parseFloat(document.getElementById("soa").value)
+        let b = parseFloat(document.getElementById("sob").value)
+        let result = a * b;
+        document.getElementById("ketqua").innerText = "Result Multiplication: " + result
+    }
+    function chia(){
+        let a = parseFloat(document.getElementById("soa").value)
+        let b = parseFloat(document.getElementById("sob").value)
+        let result = a / b;
+        document.getElementById("ketqua").innerText = "Result Division: " + result
+    }
+
+</script>
+
+</body>
+</html>

@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7be8ac9-f9ef-479b-ade7-c36034077f36" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/THU.html" beforeDir="false" afterPath="$PROJECT_DIR$/THU.html" afterDir="false" />
+    <list default="true" id="0dc49d0f-0909-4eea-b677-add632424746" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/JS.CHUAN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThuchanhB6-Java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai 5-HTML FORM, TABLE/Bai Tap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai 5-HTML FORM, TABLE/Bai Tap/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bai 5-HTML FORM, TABLE/Bai Tap/THU.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bai 5-HTML FORM, TABLE/Bai Tap/THU.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,15 +18,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1xhnDbbcQE7tsRrFT427KZ60dSx" />
+  <component name="ProjectId" id="1xlevTzircMBpGFW5ZIkvQN9l8F" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,15 +46,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e7be8ac9-f9ef-479b-ade7-c36034077f36" name="Changes" comment="" />
-      <created>1630816068945</created>
+      <changelist id="0dc49d0f-0909-4eea-b677-add632424746" name="Changes" comment="" />
+      <created>1630934332550</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1630816068945</updated>
-      <workItem from="1630816070141" duration="3028000" />
-      <workItem from="1630849940064" duration="4892000" />
-      <workItem from="1630855274541" duration="402000" />
-      <workItem from="1630926281450" duration="1973000" />
+      <updated>1630934332550</updated>
+      <workItem from="1630934333695" duration="8239000" />
+      <workItem from="1631106615087" duration="141000" />
     </task>
     <servers />
   </component>
