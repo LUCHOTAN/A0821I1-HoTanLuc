@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 1: Kiểm tra a có chia hết cho b không</h1>
+<input placeholder="Nhập vào số a" id="a">
+<input placeholder="Nhập vào số b" id="b">
+<button onclick="kiemtra()" id="KQ">Kiểm tra</button>
+<script>
+    function kiemtra() {
+        let a = document.getElementById("a").value
+        let b = document.getElementById("b").value
+        let c = a % b;
+        if (c === 0) {
+            document.getElementById("KQ").innerText = "a chia hết cho b"
+        } else {
+            document.getElementById("KQ").innerText = "a không chia hết cho b"
+        }
+    }
+</script>
+<br><br>
+<h1>Bài 2: Kiểm tra đủ tuổi học lớp 10 không</h1>
+<input placeholder="Nhập tuổi" id="tuoi">
+<button onclick="kiemtratuoi()" id="KT">Kiểm tra tuổi</button>
+<script>
+    function kiemtratuoi() {
+        let tuoi = document.getElementById("tuoi").value
+        if (tuoi < 15) {
+            document.getElementById("KT").innerText = "Bạn không đủ tuổi học lớp 10"
+        } else {
+            document.getElementById("KT").innerText = "Bạn đủ tuổi học lớp 10"
+        }
+    }
+</script>
+<br><br>
+<h1>Bài 3: Kiểm tra số nguyên lớn hơn 0 hay nhỏ hơn không</h1>
+<input placeholder="Nhập vào 1 số nguyên" id="songuyen">
+<button onclick="kiemtrasonguyen()" id="KTSN">Kiểm tra</button>
+<script>
+    function kiemtrasonguyen() {
+        let songuyen = document.getElementById("songuyen").value
+        if (songuyen < 0) {
+            document.getElementById("KTSN").innerText = "Số bạn nhập vào nhỏ hơn 0"
+        } else if (songuyen > 0) {
+            document.getElementById("KTSN").innerText = "Số bạn nhập vào lớn hơn 0"
+        } else {
+            document.getElementById("KTSN").innerText = "Số bạn nhập vào bằng 0"
+        }
+    }
+</script>
+<br><br>
+<h1>Bài 4: Kiểm tra số nguyên lớn nhất trong 3 số</h1>
+<input placeholder="Nhập vào số thứ nhất" id="sothu1">
+<input placeholder="Nhập vào số thứ hai" id="sothu2">
+<input placeholder="Nhập vào số thứ ba" id="sothu3">
+<button onclick="kiemtrasomax()" id="KTMAX">Kiểm tra</button>
+<script>
+    function kiemtrasomax() {
+        let sothu1 = parseInt(document.getElementById("sothu1").value)
+        let sothu2 = parseInt(document.getElementById("sothu2").value)
+        let sothu3 = parseInt(document.getElementById("sothu3").value)
+        if ((sothu1 > sothu2) && (sothu1 > sothu3)) {
+            document.getElementById("KTMAX").innerText = sothu1 + " là số lớn nhất"
+        } else if (sothu2 > sothu3) {
+            document.getElementById("KTMAX").innerText = sothu2 + " là số lớn nhất"
+        } else {
+            document.getElementById("KTMAX").innerText = sothu3 + " là số lớn nhất"
+        }
+
+    }
+</script>
+<br><br>
+<h1>Bài 5: Kiểm tra học lực học sinh</h1>
+<input placeholder="Nhập điểm kiểm tra" id="diemkiemtra">
+<input placeholder="Nhập điểm giữa kỳ" id="diemgiuaky">
+<input placeholder="Nhập điểm cuối kỳ" id="diemcuoiky">
+<button onclick="xeploai()" id="xeploai">Xem xếp loại</button>
+<script>
+    function xeploai() {
+        let diemkiemtra = parseInt(document.getElementById("diemkiemtra").value)
+        let diemgiuaky = parseInt(document.getElementById("diemgiuaky").value)
+        let diemcuoiky = parseInt(document.getElementById("diemcuoiky").value)
+        let dtb = (diemkiemtra + diemgiuaky * 2 + diemcuoiky * 3) / 6
+        if (dtb >= 8) {
+            document.getElementById("xeploai").innerText = "HỌC SINH GIỎI"
+        } else if (dtb >= 6.5) {
+            document.getElementById("xeploai").innerText = "HỌC SINH KHÁ"
+        } else if (dtb >= 5) {
+            document.getElementById("xeploai").innerText = "HỌC SINH TRUNG BÌNH"
+        } else {
+            document.getElementById("xeploai").innerText = "HỌC SINH YẾU"
+        }
+    }
+</script>
+<br><br>
+
+</body>
+</html>

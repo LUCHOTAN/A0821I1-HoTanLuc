@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="Images/Hinha1.png" width="200px" height="700px" onclick="chon(1)" id="cotanh1">
+<img src="Images/Hinha2.png" width="200px" height="700px" onclick="chon(2)" id="cotanh2">
+<img src="Images/Hinha3.png" width="200px" height="700px" onclick="chon(3)" id="cotanh3">
+<img src="Images/Hinha4.png" width="200px" height="700px" onclick="chon(4)" id="cotanh4">
+<img src="Images/Hinha5.png" width="200px" height="700px" onclick="chon(5)" id="cotanh5">
+<br><br>
+<h1 id="KQ">Kết quả</h1>
+<script>
+    function chon(cotanh) {
+        let chuyendoiid = "cotanh" + cotanh
+        let img = document.getElementById(String(chuyendoiid)).getAttribute('src')
+        if (img === "Images/Hinha" + cotanh + ".png") {
+            document.getElementById(String(chuyendoiid)).src = "Images/Hinhb" + cotanh + ".png"
+        } else if (img === "Images/Hinhb" + cotanh + ".png") {
+            document.getElementById(String(chuyendoiid)).src = "Images/Hinhc" + cotanh + ".png"
+        } else {
+            document.getElementById(String(chuyendoiid)).src = "Images/Hinha" + cotanh + ".png"
+        }
+        if ((document.getElementById("cotanh1").getAttribute('src') === "Images/Hinha1.png"
+                && document.getElementById("cotanh2").getAttribute('src') === "Images/Hinha2.png"
+                && document.getElementById("cotanh3").getAttribute('src') === "Images/Hinha3.png"
+                && document.getElementById("cotanh4").getAttribute('src') === "Images/Hinha4.png"
+                && document.getElementById("cotanh5").getAttribute('src') === "Images/Hinha5.png")
+            || (document.getElementById("cotanh1").getAttribute('src') === "Images/Hinhb1.png"
+                && document.getElementById("cotanh2").getAttribute('src') === "Images/Hinhb2.png"
+                && document.getElementById("cotanh3").getAttribute('src') === "Images/Hinhb3.png"
+                && document.getElementById("cotanh4").getAttribute('src') === "Images/Hinhb4.png"
+                && document.getElementById("cotanh5").getAttribute('src') === "Images/Hinhb5.png")
+            || (document.getElementById("cotanh1").getAttribute('src') === "Images/Hinhc1.png"
+                && document.getElementById("cotanh2").getAttribute('src') === "Images/Hinhc2.png"
+                && document.getElementById("cotanh3").getAttribute('src') === "Images/Hinhc3.png"
+                && document.getElementById("cotanh4").getAttribute('src') === "Images/Hinhc4.png"
+                && document.getElementById("cotanh5").getAttribute('src') === "Images/Hinhc5.png")
+        ) {
+            document.getElementById("KQ").innerText = "KHỚP RỒI BẠN ƠI"
+        } else {
+            document.getElementById("KQ").innerText = "CHƯA KHỚP"
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let average = parseInt(prompt("Input point:"));
+    let absent = prompt("Input absent percent: ")
+
+    if (average >= 9) {
+        if(absent <= 50){
+            alert("Excellent.");
+        } else {
+            alert("Good.");
+        }
+    } else if (average >= 7) {
+        alert("Good.");
+    } else if (average >= 6) {
+        alert("Average.")
+    } else {
+        alert("Below.")
+    }
+</script>
+</body>
+</html>

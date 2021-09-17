@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    td button {
+        width: 100px;
+        height: 40px
+    }
+</style>
+<body>
+<table style="width: 400px" border="1">
+    <tr>
+        <td colspan="4"><p id="KQ" style="width: 408px; height: 50px; text-align: right"></p></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="nhap('1')">1</button>
+        </td>
+        <td>
+            <button onclick="nhap('2')">2</button>
+        </td>
+        <td>
+            <button onclick="nhap('3')">3</button>
+        </td>
+        <td>
+            <button onclick="nhap('+')">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="nhap('4')">4</button>
+        </td>
+        <td>
+            <button onclick="nhap('5')">5</button>
+        </td>
+        <td>
+            <button onclick="nhap('6')">6</button>
+        </td>
+        <td>
+            <button onclick="nhap('-')">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="nhap('7')">7</button>
+        </td>
+        <td>
+            <button onclick="nhap('8')">8</button>
+        </td>
+        <td>
+            <button onclick="nhap('9')">9</button>
+        </td>
+        <td>
+            <button onclick="nhap('*')">X</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="nhap('C')">C</button>
+        </td>
+        <td>
+            <button onclick="nhap('0')">0</button>
+        </td>
+        <td>
+            <button onclick="nhap('=')">=</button>
+        </td>
+        <td>
+            <button onclick="nhap('/')">/</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function nhap(sonhapvao) {
+        let dayso = document.getElementById("KQ").innerText
+        if (sonhapvao == "C") {
+            document.getElementById("KQ").innerText = ""
+        } else if (sonhapvao == "=") {
+            let tinhtoan = eval(dayso)
+            document.getElementById("KQ").innerText = tinhtoan
+        } else {
+            document.getElementById("KQ").innerText = dayso + sonhapvao
+        }
+    }
+</script>
+</body>
+</html>

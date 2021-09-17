@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="anhbong.jpg" id="anh" width="300px"> <br>
+<button id="button" onclick="move()">MOVE RIGHT</button>
+<script>
+    let jpgobj = document.getElementById("anh")
+    jpgobj.style.position = 'relative'
+    jpgobj.style.left = '0px'
+    function move(){
+        jpgobj.style.left = parseInt(jpgobj.style.left) + 100 + 'px'
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 1: Chuyển độ C sang độ F</h1>
+<input placeholder="nhập độ C" id="doC">
+<button id="chuyendoi()" onclick="chuyendoF()">Chuyển đổi</button>
+<p id="KQ">Kết quả</p>
+<script>
+    function chuyendoF() {
+        let doc = parseInt(document.getElementById("doC").value)
+        let dof = doc * 9 / 5 + 32
+        document.getElementById("KQ").innerText = doc + " độ C bằng " + dof + " độ F"
+    }
+</script>
+<br><br>
+<h1>Bài 2: Chuyển từ met sang feet</h1>
+<input placeholder="nhập met" id="m">
+<button id="chuyendoifeet()" onclick="chuyendoifeet()">Chuyển đổi</button>
+<p id="KQfeet">Kết quả</p>
+<script>
+    function chuyendoifeet() {
+        let met = parseInt(document.getElementById("m").value)
+        let feet = m * 3.2808
+        document.getElementById("KQfeet").innerText = met + " met bằng " + feet + " feet"
+    }
+</script>
+<br><br>
+<h1>Bài 3: Tính diện tích hình vuông</h1>
+<input placeholder="nhập số đo cạnh hình vuôn" id="canh">
+<button id="tinhdientich()" onclick="tinhdientich()">Chuyển đổi</button>
+<p id="dientichhinhvuong">Kết quả</p>
+<script>
+    function tinhdientich() {
+        let canh = parseInt(document.getElementById("canh").value)
+        let dientichhinhvuong = canh * canh
+        document.getElementById("dientichhinhvuong").innerText = "Diện tích hình vuông là " + dientichhinhvuong
+    }
+</script>
+<br><br>
+<h1>Bài 6: Giải phương trình bậc 1</h1>
+<p>Phương trình dạng: ax + b = c</p>
+<input id="a1" placeholder="nhập a1">
+<input id="b1" placeholder="nhập b2">
+<input id="c1" placeholder="nhập c2">
+<button id="tinhx" onclick="tinhx()">Tính x</button>
+<p id="kqptbacnhat">Ket qua</p>
+<script>
+    function tinhx() {
+        let a1 = parseInt(document.getElementById("a1").value)
+        let b1 = parseInt(document.getElementById("b1").value)
+        let c1 = parseInt(document.getElementById("c1").value)
+        let x1 = (c1 - b1) / a1
+        document.getElementById("kqptbacnhat").innerText = "x bằng " + x1
+    }
+</script>
+<br><br>
+<h1>Bài 7: Giải phương trình bậc 2</h1>
+<p>Phương trình dạng: ax^2 + bx = c</p>
+<input id="a2" placeholder="nhập a2">
+<input id="b2" placeholder="nhập b2">
+<input id="c2" placeholder="nhập c2">
+<button id="tinhx2" onclick="tinhx2()">Tính x</button>
+<p id="kqptbachai">Ket qua</p>
+<script>
+    function tinhx2() {
+        let a2 = parseInt(document.getElementById("a2").value)
+        let b2 = parseInt(document.getElementById("b2").value)
+        let c2 = parseInt(document.getElementById("c2").value)
+        if ((c2 / a2 + (b2 * b2) / (4 * a2 * a2)) >= 0) {
+            let x2a = Math.sqrt(c2 / a2 + (b2 * b2) / (4 * a2 * a2)) - b2 / (2 * a2)
+            let x2b = 0 - Math.sqrt(c2 / a2 + (b2 * b2) / (4 * a2 * a2)) - b2 / (2 * a2)
+            document.getElementById("kqptbachai").innerText = "x bằng " + x2a + " hoặc x bằng " + x2b
+        } else {
+            document.getElementById("kqptbachai").innerText = "Phương trình vô nghiệm"
+        }
+
+    }
+</script>
+<br><br>
+<h1>Bài 9: Kiểm tra 3 số thực có phải cạnh của tam giá không</h1>
+<input id="a3" placeholder="nhập a3">
+<input id="b3" placeholder="nhập b3">
+<input id="c3" placeholder="nhập c3">
+<button id="kiemtracanhtamgiac" onclick="kiemtracanhtamgiac()">Kiểm tra có phải 3 cạnh tam giác</button>
+<p id="kqcanhtamgiac">Kết quả</p>
+<script>
+    function kiemtracanhtamgiac() {
+        let a3 = parseInt(document.getElementById("a3").value)
+        let b3 = parseInt(document.getElementById("b3").value)
+        let c3 = parseInt(document.getElementById("c3").value)
+        if ((a3 > 0)&&(b3 > 0)&&(c3 > 0)&&(a3 + b3 > c3)&&(a3 + c3 > b3)&&(b3 + c3 > a3)) {
+            document.getElementById("kqcanhtamgiac").innerText = "3 số nhập vào là 3 cạnh của 1 tam giác"
+        } else {
+            document.getElementById("kqcanhtamgiac").innerText = "3 số nhập vào không phải là 3 cạnh của 1 tam giác"
+        }
+    }
+</script>
+<br><br>
+</body>
+</html>
