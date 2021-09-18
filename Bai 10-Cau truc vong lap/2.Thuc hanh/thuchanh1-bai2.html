@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bài 2</h2>
+<script>
+    let a = 1
+    let total = 0
+    let n = parseInt(prompt("Nhập vào 1 số N lớn hơn 0 để tính tổng từ 1 đến N "))
+    if (n > 0) {
+        while (a <= n) {
+            total = a + total;
+            a++
+        }
+        document.write("Tổng từ 1 đến "+n + " là " + total)
+    } else {
+        alert("Bạn nhập N sai rồi, nhập lại nào")
+    }
+
+</script>
+</body>
+</html>

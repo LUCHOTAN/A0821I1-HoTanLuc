@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // document.write(1 + "<br>"); //in
+    // document.write(2 + "<br>");
+    // document.write(3 + "<br>");
+    // document.write(4 + "<br>");
+    // document.write(5 + "<br>");
+
+    // let i = 1;
+    // for (; i <= 5;) {
+    //     document.write(i + "<br>"); //1 2 3 4 5
+    //     i++;
+    // }
+
+    // let index = 1;
+    // while (index <= 5){
+    //     document.write(index + "<br>"); //1 2..5
+    //     index++; //2 ..6
+    // }
+
+    // let money = 10;
+    // while (money > 0){
+    //     let product = prompt("Quy khach muon mua gi ?")
+    //     let price = parseInt(prompt("Nhap gia san pham: "));
+    //     if(price <= money){
+    //         document.write("Ban da mua: " + product + " voi gia la: " + price + "<br>");
+    //         money = money - price;
+    //     }
+    // }
+
+    // let i = 1;
+    // while (true){
+    //     document.write(i + "<br>"); //1 2 3 4 5
+    //     i++;
+    //     if(i == 10){
+    //         break;
+    //     }
+    // }
+
+    // let i = 1;
+    // while (i > 5) {
+    //     document.write("OK");
+    // }
+
+    // do {
+    //     document.write("OK");
+    // } while (i > 5) ;
+
+    // let input = "";
+    // do {
+    //     input = prompt("Vui long nhap ki tự, nhập X để thoát.");
+    //     console.log("Kí tự bạn vừa nhập là: " + input);
+    // }while (input != "x");
+
+
+    // for (let row = 1; row <= 3; row++) { //lặp dòng
+    //     for (let col = 1; col <= 5; col++) { //lặp cột
+    //         document.write(1 + " ")
+    //         // if(col == 3){
+    //         //     break;
+    //         // }
+    //     }
+    //     document.write("<br>");
+    //     if(row == 2){
+    //         break;
+    //     }
+    // }
+
+    // for (let i = 1; i <= 5; i++) {
+    //     if (i == 3 || i == 4) {
+    //         // break;
+    //         continue;
+    //     }
+    //     document.write(i + "<br>"); //1 2 4 5
+    // }
+
+    loop1:for (let row = 1; row <= 3; row++) { //lặp dòng
+        for (let col = 1; col <= 5; col++) { //lặp cột
+            document.write(1 + " ")
+            if(col == 3){
+                break loop1;
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
