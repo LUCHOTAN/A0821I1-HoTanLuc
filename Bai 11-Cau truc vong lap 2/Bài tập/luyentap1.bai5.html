@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let fn = 0
+    let fn1 = 1
+    let fn2 = 1
+    let i = 4
+    let chuoi = "0+1+1"
+    for (fn = 0; i <= 20;) {
+        fn = fn1 + fn2
+        chuoi = chuoi+ "+" + fn
+        fn1 = fn2
+        fn2 = fn
+        i = i + 1
+    }
+    document.write("Tổng 20 số fibonacci đầu tiên là: " + eval(chuoi))
+</script>
+</body>
+</html>

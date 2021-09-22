@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i = ""
+    let j = ""
+    let hang = ""
+    let bang = ""
+    for (i=1;i<=9;i++){
+        let k = ""
+        for(j=2;j<=9;j++){
+            hang = "<td> " + j + "x" + i + "=" + i*j + "</td>"
+            k = k + hang
+        }
+        bang = "<tr>" + bang + k + "</tr>"
+    } document.write("<table border='1' width='300' cellspacing='0' cellpadding='3'>"+ bang + "</table>")
+</script>
+</body>
+</html>
