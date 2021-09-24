@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính lãi ngân hàng</h1>
+<script>
+    let loan = parseInt(prompt("Nhập gốc vay ngân hàng"))
+    let rate = parseInt(prompt("Nhập lãi suất vay 1 tháng (nhập cả %)"))/100
+    let month = parseInt(prompt("Nhập số tháng tính lãi kép"))
+    let i
+    let interest=0
+    let tonglai = 0
+    for(i = 1; i<=month;i++){
+        interest = loan*rate
+        loan = loan + loan*rate
+        tonglai = tonglai + interest
+    }
+    document.write("Tổng lãi kép của khoản vay với lãi suất "+rate+" sau "+month+ " tháng là " +tonglai)
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input placeholder="Nhập phần tử vào mảng" id="nhap">Nhập phần tử
+<input type="button" onclick="addelement()">ADD vào array
+<input type="button" onclick="display_array()">Trình duyệt
+<script>
+    let element = new Array()
+    let index = 0
+
+    function addelement(){
+        element[index] = document.getElementById("nhap").value
+        index += 1
+    }
+
+    function display_array() {
+        for (let e of element) {
+            document.write(e + "<br>")
+        }
+    }
+</script>
+</body>
+</html>

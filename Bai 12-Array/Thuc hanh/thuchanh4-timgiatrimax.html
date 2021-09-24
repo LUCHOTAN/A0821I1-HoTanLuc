@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayA = [1, 2, 3, 4, 5, 11, 7]
+    let k = arrayA.length
+    let i
+    let max = arrayA[0]
+    for (i = 1; i < k; i++) {
+        if (arrayA[i] > max) {
+            max = arrayA[i]
+        }
+    }
+    document.write("Max trong mảng là " + max)
+</script>
+</body>
+</html>

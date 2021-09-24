@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayA = [1,2,3,4,5,6,7]
+
+    let k = arrayA.length
+    let i
+    let b
+    for(i=0;i<k;i++){
+        b=arrayA[i]
+        arrayA[i]=arrayA[k-1]
+        arrayA[k-1]= b
+        k -= 1
+    }
+    console.log(arrayA)
+</script>
+</body>
+</html>

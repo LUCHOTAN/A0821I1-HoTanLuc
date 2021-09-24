@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let myArr = [5,4,6,2];
+        let myArr1 = [18,20];
+
+        /*thêm 8 vào cuối mảng*/
+        // myArr.push(8);
+        // myArr[myArr.length] = 8;
+        // myArr[5] = 8;
+        // for (let e of myArr){
+        //     document.write(e + " "); //5,4,6,undefined,undefined,8
+        // }
+
+        /*Thêm 10 vào đầu mảng*/
+        // myArr.unshift(10);
+
+        /*Xóa phần tử ở cuối mảng*/
+        // myArr.pop();
+
+        /*Xóa ở đầu mảng*/
+        // myArr.shift();
+
+        /*Chuyển mảng thành chuỗi*/
+        // let str = myArr.toString();
+        // let str = myArr.join("-");
+        // console.log(str);
+
+        /*Đảo mảng*/
+        // myArr.reverse();
+
+        /*Chèn ở vị trí bất kì*/
+        // myArr.splice(2,0,11); //chèn 11 tại index 2
+        // myArr.splice(2,0,11,12,13); //chèn 11,12,13 từ index 2
+
+        /*xóa tại vị trí bất kì*/
+        // myArr.splice(2,1);
+        // myArr.splice(0,1); //Từ index 0, xóa đi 1 phần tử
+        // myArr.splice(0,2); //Từ index 0, xóa đi 2 phần tử
+
+        // for (let e of myArr){
+        //     document.write(e + " ");
+        // }
+
+        /*Tìm kiếm*/
+        let index = myArr.indexOf(6);
+        //trả về index tương ứng của số cần tìm,
+        //trả về -1 nếu ko có phần tử cần tìm.
+
+         /*Sắp xếp*/
+        myArr.sort(function (a, b) {
+            // return a - b; //sắp xếp tăng
+            return b - a; //sắp xếp giảm
+        })
+        // for (let e of myArr){
+        //     document.write(e + " ");
+        // }
+
+        /*Nối nhiều mảng*/
+        myArr1 = myArr1.concat(myArr);
+        for (let e of myArr1){
+            document.write(e + " ");
+        }
+
+    </script>
+</body>
+</html>
