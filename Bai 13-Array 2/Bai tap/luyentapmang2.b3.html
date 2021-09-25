@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let k = parseInt(prompt("Nhập vào số lượng phần tử của mảng"))
+    let myArray = new Array(k)
+    for (let i = 0; i < k; i++) {
+        let nhap = prompt("Nhập vào phần tử có chỉ số là " + i)
+        myArray[i] = nhap
+    }
+    let h = 0
+    for (let j = 0; j<k;j++){
+        if(myArray[j] - myArray[j] === 0){
+            h = h+1
+        }
+    }
+    document.write("Số ký tự là số trong mảng là " + h)
+
+</script>
+
+</body>
+</html>

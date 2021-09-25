@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let k = prompt("Nhập vào một chuỗi có chưa ký tự -, nó sẽ được thay bằng ký tự _")
+    l = k.length
+    let myArray = new Array(l)
+    for (let i = 0; i < l; i++) {
+        myArray[i] = k[i]
+    }
+    for (let j=0;j<l;j++){
+        if(myArray[j] == "-"){
+            myArray[j] = "_"
+        }
+    }
+    for (let m of myArray){
+        document.write(m)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hiển thị số lớn nhất trong mảng số nguyên nhập vào và giá trị trung bình của mảng</h1>
+<script>
+    let k = parseInt(prompt("Nhập vào số lượng phần tử của mảng"))
+    let myArray = new Array(k)
+    for (let i = 0; i < k; i++) {
+        let sonhap = parseInt(prompt("Nhập vào phần tử có chỉ số là " + i))
+        myArray[i] = sonhap
+    }
+    let max = myArray[0]
+    let sum = myArray[0]
+    for (let j = 1; j < k; j++) {
+    if(myArray[j]>max){
+        max = myArray[j]
+    }sum = sum + myArray[j]
+    }
+    let average = sum/k
+    document.write("Số lớn nhất trong mảng số nguyên bạn nhập vào là "+ max + ". ")
+    document.write("Trung bình của các số nguyên bạn nhập vào trong mảng là "+average)
+</script>
+</body>
+</html>

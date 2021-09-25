@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoiso = parseInt(prompt("Nhập vào 1 dãy số để hiển thị dấu - giữa 2 số chẵn"))
+    let tach = chuoiso.toString()
+    let x = tach.length
+    let myArray = new Array(x)
+    for (let i = 0; i < x; i++) {
+        myArray[i] = parseInt(tach[i])
+    }
+    for (let j =0; j<x;j++){
+        if(myArray[j]%2===0 && myArray[j+1]%2===0){
+            myArray.splice(j+1,0,"-")
+            j += 1
+        }
+    }
+    for (let k = 0;k< myArray.length;k++){
+        document.write(myArray[k])
+    }
+</script>
+</body>
+</html>

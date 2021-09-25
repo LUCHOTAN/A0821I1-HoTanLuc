@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let k = parseInt(prompt("Nhập vào số lượng phần tử của mảng"))
+    let myArray = new Array(k)
+    for (let i = 0; i < k; i++) {
+        let sonhap = parseInt(prompt("Nhập vào phần tử có chỉ số là " + i))
+        myArray[i] = sonhap
+    }
+    let nhap = parseInt(prompt("Nhập vào 1 số nguyên để kiểm tra có nằm trong mảng không, nếu có thì xóa phần tử đó"))
+    for (let j = 0; j < k; j++) {
+        if (myArray[j] == nhap) {
+            for (let l = j; l < k; l++) {
+                myArray[l] = myArray[l + 1]
+            }
+            myArray[k - 1] = 0
+            j = j - 1
+        }
+    }
+    document.write(myArray)
+
+
+</script>
+</body>
+</html>

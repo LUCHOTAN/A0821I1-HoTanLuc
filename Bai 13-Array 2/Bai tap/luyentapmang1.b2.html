@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myArray = new Array(10)
+    for (let i = 0; i <= 9; i++) {
+        let sonhap = parseInt(prompt("Nhập vào 10 số nguyên khác nhau để tìm số lớn nhất"))
+        let k = 0
+        for (let n = 0; n < i; n++) {
+            if (myArray[n] === sonhap) {
+                alert("Số bạn vừa nhập bị trùng rồi, hãy nhập lại")
+                i -= 1
+                n = i - 1
+                k = k + 1
+            } else {
+                k = 0
+            }
+        }
+        if (k === 0) {
+            myArray[i] = sonhap
+        }
+    }
+    let max = myArray[0]
+    let m = 0
+    for (let j = 1; j <= 9; j++) {
+        if (myArray[j] > myArray[j - 1]) {
+            max = myArray [j]
+            m = j
+        }
+    }
+    document.write("số lớn nhất trong 10 số nguyên bạn nhập vào là " + max + " nằm ở vị trí có chỉ số " + m)
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let k = parseInt(prompt("Nhập vào số lượng phần tử của mảng"))
+    let myArray = new Array(k)
+    for (let i = 0; i < k; i++) {
+        let nhap = prompt("Nhập vào phần tử có chỉ số là " + i)
+        myArray[i] = nhap
+    }
+    for (let j = 0; j < k; j++) {
+        m = myArray[j]
+        myArray[j] = myArray[k - 1]
+        myArray[k - 1] = m
+        k -= 1
+    }
+    document.write(myArray)
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let lower = "abcdefghijklmnopqrstuvwxyz"
+    let nhap = prompt("Bạn hãy nhập vào 1 chuỗi chữ hoa + thường")
+    let chuyen = nhap.toString()
+    let myArray = []
+    for (let i = 0; i < chuyen.length; i++) {
+        if (UPPER.indexOf(chuyen[i]) !== (-1)) {
+            myArray.push(chuyen[i].toLowerCase())
+        }
+        if (lower.indexOf(chuyen[i]) !== (-1)) {
+            myArray.push(chuyen[i].toUpperCase())
+        }
+    }
+    for(let element of myArray){
+        document.write(element)
+    }
+
+
+</script>
+</body>
+</html>

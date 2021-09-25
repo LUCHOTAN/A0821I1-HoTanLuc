@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input placeholder="Nhập từ cần tra" id="tunhap"> Nhập từ tiếng Anh hoặc Việt là số đếm từ 1 đến 10
+<br><br>
+
+<button onclick="tracuu()" name="tracuu">Tra cứu</button>
+<br><br>
+<h2 id="KQ">Kết quả</h2>
+<script>
+    let english = new Array("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")
+    let vietnam = new Array("một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín", "mười")
+
+    function tracuu() {
+        let nhap = document.getElementById("tunhap").value
+        if (english.indexOf(nhap) !== -1) {
+            document.getElementById("KQ").innerText = vietnam[english.indexOf(nhap)]
+        } else if (vietnam.indexOf(nhap) !== -1) {
+            document.getElementById("KQ").innerText = english[vietnam.indexOf(nhap)]
+        } else {
+            document.getElementById("KQ").innerText = "Từ bạn nhập không có trong từ điển"
+        }
+    }
+</script>
+</body>
+</html>

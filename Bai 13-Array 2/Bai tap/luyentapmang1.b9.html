@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let k = parseInt(prompt("Nhập vào số lượng phần tử của mảng A"))
+    let myArrayA = new Array(k)
+    for (let i = 0; i < k; i++) {
+        let sonhapA = parseInt(prompt("Nhập vào phần tử của mảng A có chỉ số là " + i))
+        myArrayA[i] = sonhapA
+    }
+    let l = parseInt(prompt("Nhập vào số lượng phần tử của mảng B"))
+    let myArrayB = new Array(l)
+    for (let j = 0; j < l; j++) {
+        let sonhapB = parseInt(prompt("Nhập vào phần tử của mảng B có chỉ số là " + j))
+        myArrayB[j] = sonhapB
+    }
+    /* Cách 1
+    let c = myArrayA.concat(myArrayB)
+    document.write(c)*/
+    let myArrayC = new Array(k+l)
+    for(let m=0;m<k;m++){
+        myArrayC[m] = myArrayA[m]
+    }
+    let h = 0
+    for(let n = k;n<k+l;n++){
+        myArrayC[n] = myArrayB[h]
+        h=h+1
+    }
+    document.write(myArrayC)
+</script>
+
+</body>
+</html>

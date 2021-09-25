@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let k = parseInt(prompt("Nhập vào số lượng phần tử của mảng A"))
+    let myArrayA = new Array(k)
+    for (let i = 0; i < k; i++) {
+        let nhapA = prompt("Nhập vào phần tử của mảng A có chỉ số là " + i)
+        myArrayA[i] = nhapA
+    }
+    let l = parseInt(prompt("Nhập vào số lượng phần tử của mảng B"))
+    let myArrayB = new Array(l)
+    for (let j = 0; j < l; j++) {
+        let nhapB = prompt("Nhập vào phần tử của mảng B có chỉ số là " + j)
+        myArrayB[j] = nhapB
+    }
+    if (l != k) {
+        document.write("Hai chuỗi nhập vào không giống nhau")
+    } else {
+        let n = 0
+        for (let m = 0; m < k; m++) {
+            if (myArrayA[m] !== myArrayB[m]) {
+                document.write("Hai chuỗi nhập vào không giống nhau")
+                n = n + 1
+                break;
+            }
+        }
+        if (n === 0) {
+            document.write("Hai chuỗi nhập vào là giống nhau")
+        }
+    }
+
+</script>
+</body>
+</html>

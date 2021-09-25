@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Sắp xếp các số nhập vào từ lớn tới bé</h2>
+<script>
+    let k = parseInt(prompt("Nhập vào số lượng phần tử của mảng"))
+    let myArray = new Array(k)
+    for (let i = 0; i < k; i++) {
+        let sonhap = parseInt(prompt("Nhập vào phần tử có chỉ số là " + i))
+        myArray[i] = sonhap
+    }
+    let h = k
+    for (let l = 0; l < k - 1; l++) {
+        let min = myArray[0]
+        for (let m = 1; m < h; m++) {
+            if (myArray[m] > min) {
+                change = myArray[m]
+                myArray[m] = myArray[m - 1]
+                myArray[m - 1] = change
+            } else {
+                min = myArray[m]
+            }
+        }
+        h = h - 1
+    }
+    /*myArray.sort(function (a, b) {
+            return b - a
+        }
+    )*/
+    document.write(myArray)
+</script>
+</body>
+</html>

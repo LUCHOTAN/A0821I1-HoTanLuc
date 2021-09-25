@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let k = prompt("Nhập vào một câu để đếm số từ")
+    l = k.length
+    let j = 1
+    for (let i = 0; i < l; i++) {
+        if (k[i] === " ") {
+            j = j + 1
+        }
+    }
+    document.write("Số từ trong câu bạn vừa nhập là " + j)
+</script>
+
+</body>
+</html>
