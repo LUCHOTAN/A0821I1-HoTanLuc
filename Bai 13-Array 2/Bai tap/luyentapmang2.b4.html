@@ -8,10 +8,20 @@
 <script>
     let k = prompt("Nhập vào một câu để đếm số từ")
     l = k.length
+    let ktcuoi = 0
+    for (let n = l - 1; n >= 0; n--) {
+        if (k[n] !== " ") {
+            ktcuoi = n + 1
+            break
+        }
+
+    }
     let j = 1
-    for (let i = 0; i < l; i++) {
+    for (let i = 0; i < ktcuoi; i++) {
         if (k[i] === " ") {
-            j = j + 1
+            if (i !== 0 && k[i - 1] !== " ") {
+                j = j + 1
+            }
         }
     }
     document.write("Số từ trong câu bạn vừa nhập là " + j)
