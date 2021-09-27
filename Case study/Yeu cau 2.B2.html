@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhap = prompt("Nhập vào 1 ký tự để kiểm tra là nguyên âm hay phụ âm trong tiếng Anh")
+    let myArrayNam = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E']
+    let myArrayPam = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z",
+        "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
+    let k = 0
+    for (let i = 0; i < myArrayNam.length; i++) {
+        if (myArrayNam[i] === nhap) {
+            document.write("Ký tự bạn nhập vào là nguyên âm")
+            k = k + 1
+            break;
+        }
+    }
+    for (let j = 0; j < myArrayPam.length; j++) {
+        if (myArrayPam[j] === nhap) {
+            document.write("Ký tự bạn nhập vào là phụ âm")
+            k = k + 1
+            break;
+        }
+    }
+    if (k === 0) {
+        document.write("Ký tự bạn nhập vào không đúng (không phải nguyên âm cũng không phải phụ âm)")
+    }
+</script>
+</body>
+</html>

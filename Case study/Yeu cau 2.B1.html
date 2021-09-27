@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt("Nhập lương nhân viên"))
+    let netSalary = 0
+    let piTax = 0
+    if (salary < 7000000) {
+        piTax = salary * 5 / 100
+    } else if (salary <= 15000000){
+        piTax = 7000000 * 5 / 100 + (salary - 7000000)*10/100
+    } else {
+        piTax = 7000000 * 5 / 100 + 8000000 * 10/100 + (salary - 15000000)*20/100
+    }
+    netSalary = salary - piTax
+    document.write("Thuế TNCN của nhân viên là " + piTax + " .Tiền lương còn lại của nhân viên là " + netSalary)
+</script>
+</body>
+</html>

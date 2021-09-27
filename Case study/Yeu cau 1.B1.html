@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("Nhập chiều rộng hình chữ nhật"))
+    let col = parseInt(prompt("Nhập chiều dài hình chữ nhật"))
+    for(let i=1; i<=row;i++){
+        for(let j=1; j<=col;j++){
+            if(j==1 || j ==col || i == 1 || i == row){
+                document.write("*")
+            }
+            else {
+                document.write("&nbsp&nbsp")
+            }
+        }
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>
