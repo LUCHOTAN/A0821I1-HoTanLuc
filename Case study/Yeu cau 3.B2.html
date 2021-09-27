@@ -9,15 +9,33 @@
     let k = parseInt(prompt("Nhập vào số lượng phần tử của mảng A"))
     let myArrayA = new Array(k)
     for (let i = 0; i < k; i++) {
-        let sonhapA = parseInt(prompt("Nhập vào phần tử của mảng A có chỉ số là " + i))
+        let sonhapA = parseInt(prompt("Nhập vào phần tử là số của mảng A có chỉ số là " + i))
         myArrayA[i] = sonhapA
     }
     let l = parseInt(prompt("Nhập vào số lượng phần tử của mảng B"))
     let myArrayB = new Array(l)
     for (let j = 0; j < l; j++) {
-        let sonhapB = parseInt(prompt("Nhập vào phần tử của mảng B có chỉ số là " + j))
+        let sonhapB = parseInt(prompt("Nhập vào phần tử là số của mảng B có chỉ số là " + j))
         myArrayB[j] = sonhapB
     }
+    let missingValueAB = new Array("")
+    let v = 0
+    for (let m = 0; m < l; m++) {
+        let check = 0
+        for (let n = 0; n < k; n++) {
+            if (myArrayB[m] === myArrayA[n]) {
+                check = check + 1
+            }
+        }
+        if (check === 0) {
+            missingValueAB[v] = myArrayB[m]
+            v += 1
+        }
+    }
+    let myArrayC = missingValueAB.sort(function (a, b) {
+        return a - b;
+    })
+        document.write(myArrayC)
 
 </script>
 </body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let k = parseInt(prompt("Nhập vào số lượng phân số"))
+    let myArrayA = new Array(k)
+    for (let i = 0; i < k; i++) {
+        let sonhapA = parseInt(prompt("Nhập vào tử số của phân số có chỉ số là " + i))
+        myArrayA[i] = sonhapA
+    }
+    let myArrayB = new Array(k)
+    for (let j = 0; j < k; j++) {
+        let sonhapB = parseInt(prompt("Nhập vào mẫu số của phân số có chỉ số là " + j))
+        myArrayB[j] = sonhapB
+    }
+    let max = myArrayA[0] / myArrayB[0]
+    let maxCs = 0
+    for (let l = 1; l < k; l++) {
+        if (myArrayA[l] / myArrayB[l] > max) {
+            max = myArrayA[l] / myArrayB[l]
+            maxCs = l
+        }
+    }
+    document.write("Phân số lớn nhất có chỉ số là " + maxCs)
+</script>
+</body>
+</html>
