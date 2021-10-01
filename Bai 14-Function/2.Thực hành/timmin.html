@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập vào số lượng phần tử của mảng A"))
+    let myArrayA = new Array(n)
+    for (let i = 0; i < n; i++) {
+        let sonhap = parseInt(prompt("Nhập vào phần tử có chỉ số " + i + " của mảng A"))
+        myArrayA[i] = sonhap
+    }
+
+    function minArray(myArray) {
+        let n = myArray.length;
+        let min = myArray[0];
+        for (let i = 1; i < n; i++) {
+            if (myArray[i] < min) {
+                min = myArray[i]
+            }
+        }
+        document.write("Giá trị nhỏ nhất trong mảng là " + min)
+    }
+    minArray(myArrayA)
+</script>
+</body>
+</html>

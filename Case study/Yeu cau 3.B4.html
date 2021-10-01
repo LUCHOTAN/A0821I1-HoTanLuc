@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let chuoiso = prompt("Nhập vào 1 chuỗi số")
+  let l = chuoiso.length
+  let myArray = ["không","một","hai","ba","bốn","năm","sáu","bảy","tám","chín"]
+  let myArrayNew = new Array(l)
+  for(let i=0;i<l;i++){
+    myArrayNew[i] = myArray[chuoiso[i]]
+  }
+  for (let element of myArrayNew){
+      document.write(element + " ")
+  }
+
+</script>
+</body>
+</html>

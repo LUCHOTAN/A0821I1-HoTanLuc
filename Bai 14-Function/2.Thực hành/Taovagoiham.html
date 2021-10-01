@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function confirmAnswer(confirm) {
+        if (confirm) {
+            result = "Great. We 'll play a nice game of chess"
+        } else {
+            result = "Maybe later then"
+        }
+        return result
+    }
+
+    let theanswer = confirm("Shell we play a game?")
+    let kq = confirmAnswer(theanswer)
+    alert(kq)
+
+</script>
+</body>
+</html>

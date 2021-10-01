@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Temperator Converter</h1>
+<br>
+<p>Type a value in the Fahrenheit field to convert to the value to the Ceicius</p>
+<br>
+<label>Fahrenheit</label>
+<input id ="doF" placeholder="Fahrenheit" oninput="chuyendoi(this.value)" >
+<br>
+<p>Celcius: <span id = "doC"></span></p>
+<script>
+    function chuyendoi (value){
+         value = parseFloat(value)
+        document.getElementById("doC").innerText = (value - 32)/1.8
+    }
+</script>
+
+</body>
+</html>

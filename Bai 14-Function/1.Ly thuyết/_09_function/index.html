@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function sum(){
+    //     let a = parseInt(prompt("input a"));
+    //     let b = parseInt(prompt("input b"));
+    //     let c = a + b;
+    //     alert(c);
+    // }
+    // sum();
+
+    // function sum(a, b) {
+    //     let c = a + b;
+    //     alert(c);
+    // }
+    // sum(8, 2);
+    // sum(1, 2);
+
+    /*Hàm không có trả về*/
+    // function increase(x){
+    //     document.write(++x);
+    // }
+
+    /*Hàm có trả về*/
+    function increase(x){
+        document.write(++x); //6
+        return x; // trả về 6 và thoát hàm
+        /*Những đoạn mà sau return thì không chạy dc*/
+        return 11;
+        document.write("Hello");
+    }
+
+    let y = increase(5);
+    console.log(y); //6
+
+</script>
+</body>
+</html>
