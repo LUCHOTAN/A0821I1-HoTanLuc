@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function timkiem(array){
+        let nhap = prompt("Nhập vào ký tự bất kỳ để kiểm tra số lần xuất hiện trong mảng")
+        let k = 0
+        for(j=0;j<array.length;j++){
+            if(array[j] === nhap){
+                k = k+1
+            }
+        }
+        if(k===0){
+            alert(-1)
+        } else {
+            alert("Số lần xuất hiện của ký tự "+ nhap + " trong mảng là "+ k)
+        }
+    }
+    let arrayA = new Array(parseInt(prompt("Nhập vào số lượng phần tử của mảng")))
+    for (let i =0;i<arrayA.length;i++){
+        let nhap = prompt("Nhập vào phần từ có chỉ số " + i + " của mảng")
+        arrayA[i] = nhap
+    }
+    timkiem(arrayA)
+</script>
+</body>
+</html>

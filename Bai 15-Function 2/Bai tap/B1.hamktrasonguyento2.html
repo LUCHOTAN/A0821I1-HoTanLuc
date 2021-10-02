@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let m = 0
+        for (let j = 2; j < number; j++) {
+            for (let i = 2; i < j; i++) {
+                if (j % i === 0) {
+                    m = m + 1
+                }
+            }
+            if (m === 0) {
+                document.write(j+",")
+            }
+            else{m=0}
+        }
+    }
+    isPrime(10000)
+
+</script>
+
+</body>
+</html>

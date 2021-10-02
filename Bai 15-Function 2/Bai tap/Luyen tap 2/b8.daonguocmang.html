@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function daonguocmang(array){
+       let myArray = array.reverse()
+        document.write(myArray)
+    }
+    let arrayA = new Array(parseInt(prompt("Nhập vào số lượng phần tử của mảng")))
+    for (let i =0;i<arrayA.length;i++){
+        let nhap = prompt("Nhập vào phần từ có chỉ số " + i + " của mảng")
+        arrayA[i] = nhap
+    }
+    daonguocmang(arrayA)
+</script>
+</body>
+</html>

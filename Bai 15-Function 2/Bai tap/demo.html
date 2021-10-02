@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPalindrome(str) {
+        let arr = str.split("");
+        console.log(arr)
+        if (arr.length <= 1) {
+            return true;
+        } else {
+            if (arr[0] === arr[arr.length - 1]) {
+                arr.shift();
+                arr.pop();
+                str = arr.join("");
+                isPalindrome(str);
+            } else {
+                return false;
+            }
+        }
+
+
+        // return true;
+    }
+
+
+    let check = isPalindrome("abba");
+    console.log(check)
+    if (check) {
+        alert("Chuỗi đối xứng!")
+    } else {
+        alert("Ko phải chuỗi đối xứng!")
+    }
+</script>
+</body>
+</html>
