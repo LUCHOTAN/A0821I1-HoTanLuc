@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function changeValue(funcNum){
+        console.log("1: " + funcNum); //25
+        funcNum = 1;
+        console.log("2: " + funcNum); //1
+    }
+
+    let myNum = 25;
+    /* Pass by value - truyền tham trị */
+    changeValue(myNum); //copy giá trị của biến myNum
+    // rồi truyền vào hàm
+    document.write(myNum); //25
+</script>
+</body>
+</html>

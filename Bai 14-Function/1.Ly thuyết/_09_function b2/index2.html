@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*x và y là biến toàn cục */
+    var x = 10;
+    let y = 10;
+
+    function increase(x) { //x là biến local - cục bộ
+        var y = 5; //y cũng là biến cục bộ
+        y++;
+        document.write(++x);
+        console.log("1x: " + x); //6
+        console.log("1y: " + y); //6
+    }
+
+    increase(5);
+    console.log("2x: " + x); //10
+    console.log("2x: " + y); //10
+</script>
+</body>
+</html>

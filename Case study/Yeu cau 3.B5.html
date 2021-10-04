@@ -5,6 +5,48 @@
     <title>Title</title>
 </head>
 <body>
+<h1>Xin mời quý khách chọn loại nước uống</h1>
+<br>
+<button onclick="choose('1')" id="1" value="Nước cam, có giá là 25.000đ">1.Nước cam</button>
+<button onclick="choose('2')" id="2" value="Nước ổi, có giá là 18.000đ">2.Nước ổi</button>
+<button onclick="choose('3')" id="3" value="Nước dứa, có giá là 20.000đ">3.Nước dứa</button>
+<button onclick="choose('4')" id="4" value="Nước dừa, có giá là 23.000đ">4.Nươc dừa</button>
+<script>
+    let tongtien = 0
+    do {
+        function choose(x) {
+            let mon = document.getElementById(x).value
+            let soluong = parseInt(prompt("Bạn vừa chọn " + mon + " Vui lòng nhập số lượng bạn muốn mua"))
+            let dongia = 0
+            switch (x) {
+                case ('1'):
+                    dongia = 25000;
+                    break;
+                case ('2'):
+                    dongia = 18000;
+                    break;
+                case ('3'):
+                    dongia = 20000;
+                    break;
+                case ('4'):
+                    dongia = 23000;
+                    break;
+            }
+            let tienmon = soluong * dongia
+            tongtien = tongtien + tienmon
+            let xacnhan = confirm("Bạn có muốn chọn thêm món mới không")
+            if (xacnhan) {
+                return true
+            } else {
+                alert("Tổng tiền bạn phải thanh toán là " + tongtien)
+                tongtien = 0
+                return false
+            }
+        }
+        let xacnhan = choose(x)
+    }
+    while (xacnhan === true)
 
+</script>
 </body>
 </html>

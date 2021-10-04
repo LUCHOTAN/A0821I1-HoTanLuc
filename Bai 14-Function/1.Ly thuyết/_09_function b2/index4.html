@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function changeValue(funcNum){
+        console.log("1: " + funcNum[0]); //25
+        funcNum[0] = 99;
+        funcNum.push(100);
+        console.log("2: " + funcNum[0]); //99
+    }
+
+    let num = [25];
+    changeValue(num);
+    document.write(num[0]); //99
+    document.write("<br>")
+    document.write(num[1]); //99
+</script>
+</body>
+</html>

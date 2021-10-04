@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function chuanhoa(chuoi) {
+        let length = chuoi.length
+        let myArray = new Array(length)
+        for (i = 0; i < length; i++) {
+            myArray[i] = chuoi[i]
+        }
+        for (j = 0; j < length; j++) {
+            if (j === 0 && myArray[j] === " ") {
+                myArray.shift()
+                j--
+                length = length - 1
+            } else if (j === 0 && myArray[j] !== " ") {
+                myArray[j] = myArray[j].toUpperCase()
+            } else if (j > 0 && myArray[j] === " " && myArray[j - 1] === " ") {
+                myArray.splice(j, 1)
+                j--
+                length = length - 1
+            } else if (j > 0 && myArray[j] !== " " && myArray[j - 1] === " ") {
+                myArray[j] = myArray[j].toUpperCase()
+            } else if (j > 0 && myArray[j] !== " " && myArray[j - 1] !== " ") {
+                myArray[j] = myArray[j].toLowerCase()
+            }
+        }
+
+        return myArray
+    }
+
+    function chuoidainhat(chuoi) {
+        let myArray = chuanhoa(chuoi)
+        for (let e of myArray) {
+            document.write(e)
+        }
+        let string = myArray.join("")
+        console.log(string)
+        let myArrayNew = string.split(" ")
+        console.log(myArrayNew)
+        let chuoidainhat = myArrayNew[0]
+        console.log(chuoidainhat)
+        for(let i=1;i< myArrayNew.length;i++){
+            let chuoitieptheo = myArrayNew[i]
+            if(chuoitieptheo.length>chuoidainhat.length){
+                chuoidainhat = chuoitieptheo
+            }
+        }
+        document.write("<br>Từ dài nhất là " + chuoidainhat)
+    }
+
+    let nhap = prompt("Nhập vào chuỗi ký tự")
+    chuanhoa(nhap)
+    chuoidainhat(nhap)
+</script>
+</body>
+</html>
