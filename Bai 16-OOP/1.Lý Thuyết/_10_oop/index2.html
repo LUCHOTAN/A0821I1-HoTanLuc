@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class DienThoai {
+        constructor(ten, hangSX) {
+            this.ten = ten;
+            this.hangSX = hangSX;
+        }
+
+        goiDien(){
+            document.write(this.ten + " dang goi dien. " + this.hangSX);
+        }
+
+        //Getter - Lấy thông tin của thuộc tính
+        getTen() {
+            return this.ten;
+        }
+
+        getHangSX(){
+            return this.hangSX;
+        }
+
+        //Setter
+        setTen(tenMoi) {
+            this.ten = tenMoi;
+        }
+
+        setHangSX(hangSX) {
+            this.hangSX = hangSX;
+        }
+    }
+
+    let dienThoai1 = new DienThoai("SamSung S22", "SamSung");
+    // dienThoai1.ten = "SamSung S10";
+    dienThoai1.setTen("SamSung S10")
+    dienThoai1.hangSX = "Nokia";
+    dienThoai1.goiDien();
+    document.write(dienThoai1.getTen());
+
+    // document.write("<br>")
+    // let dienThoai2 = new DienThoai("Iphone 13", "Apple");
+    // dienThoai2.goiDien();
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function mettofeet(nhap){
+        let feet = nhap * 3.279
+        document.write(nhap + " met sẽ bằng " + feet + " feet <br>")
+    }
+    function feettomet(nhap){
+        let met = nhap * 0.305
+        document.write(nhap + " feet sẽ bằng " + met+ " met")
+    }
+    let number = parseInt(prompt("Nhập 1 số để chuyển từ met sang feet và ngược lại"))
+    mettofeet(number)
+    feettomet(number)
+</script>
+</body>
+</html>

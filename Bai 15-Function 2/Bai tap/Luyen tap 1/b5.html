@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function search(star) {
+        let myArrayA = new Array("Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus")
+        let myArrayB = new Array("Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo")
+        let k = myArrayA.indexOf(star)
+        if (k=== -1){
+            alert("Bạn nhập vào chưa đúng tên ngôi sao")
+        } else {
+            alert("Chòm sao của ngôi sao " + star +" là " + myArrayB[k])
+        }
+    }
+    let nhap = prompt("Nhập vào tên 1 ngôi sao")
+    search(nhap)
+</script>
+</body>
+</html>
