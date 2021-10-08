@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(C) {
+            this.C = C
+        }
+        chuyenCsangF(){
+            let f = this.C*1.8 +32
+            document.write("Nhiệt độ tính theo độ F là " + f)
+        }
+    }
+    let nhietDo = new Temperature(parseInt(prompt("Nhập vào nhiệt độ hôm nay")))
+    nhietDo.chuyenCsangF()
+</script>
+</body>
+</html>

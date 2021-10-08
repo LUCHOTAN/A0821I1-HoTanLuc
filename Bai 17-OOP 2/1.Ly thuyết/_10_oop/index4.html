@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Animal {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        sayName(){
+            console.log("Animal name: " + this.name);
+        }
+
+        getName(){
+            return this.name;
+        }
+
+        setName(name){
+            this.name = name;
+        }
+
+        getAge(){
+            return this.age;
+        }
+
+        setAge(age){
+            this.age = age;
+        }
+    }
+
+    class Bird extends Animal{
+        constructor(name, age, weight) {
+            super(name, age);
+            this.weight = weight;
+        }
+
+        getWight() {
+            return this.weight;
+        }
+    }
+
+    class Dog extends Animal {
+        constructor(name, age, color) {
+            super(name, age); //gọi constructor của lớp cha
+            this.color = color; //this đại diện cho đối tượng của lớp hiện tại
+        }
+
+        printColor(){
+            console.log(super.getName() + " - " + this.color); //super đại diện cho lớp cha của đối tượng hiện tai
+        }
+
+        sayName() {
+            console.log("Dog name: " + this.name);
+        }
+
+        eat(bird){
+            if(bird.weight > 0) {
+                bird.weight--;
+            } else {
+                console.log("Dog: Hết đồ ăn rồi cô chủ ơi.")
+            }
+        }
+    }
+
+    class Cat extends Animal {
+        constructor(name, color) {
+            super(name);
+            this.color = color;
+        }
+
+        sayName() {
+            console.log("meo meo");
+        }
+
+        eat(bird){
+            if(bird.weight > 0) {
+                bird.weight--;
+            } else {
+                console.log("Meo: Hết đồ ăn rồi cô chủ ơi.")
+            }
+        }
+    }
+
+    // let myDog = new Dog("Tom", "3", "red");
+    // myDog.sayName();
+    // // myDog.printColor();
+    //
+    // let animal = new Animal("jerry", "4");
+    // animal.sayName();
+
+
+    let bird = new Bird("Doi Mu", 1, 1);
+    let myDog = new Dog("Tom", 3, "red");
+    let myCat = new Cat("Jerry","green");
+
+    myCat.eat(bird);
+    myDog.eat(bird);
+
+    console.log(bird.getWight());
+
+    console.log(myCat.getAge())
+
+
+</script>
+</body>
+</html>

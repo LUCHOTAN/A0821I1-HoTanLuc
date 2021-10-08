@@ -5,9 +5,45 @@
     <title>Title</title>
 </head>
 <body>
-<script>
-    let bang = "<table> <tr> <td> Product Name</td></tr>"
-
-</script>
+<h1>ADD NEW PRODUCT</h1>
+<br>
+<input placeholder="new product" id="addnew">
+<button onclick="add()">ADD</button>
+<div id="display"></div>
 </body>
+<script>
+    let sanpham = new Array("SamsungS6", "Iphone11", "Nokia", "Blacberry", "Vinsmart")
+
+    function display() {
+        let bang = "<table border='1' cellpadding='10' cellspacing='0'> <tr> <th> Product Name</th></tr>"
+        let k
+        for (let i = 0; i < sanpham.length; i++) {
+            k = k + "<tr> <td width='200px'>" + sanpham[i] + "</td> <td><button onclick='edit(" + i + ")'>Edit</button></td><td><button onclick='deleteProduct(" + i + ")'>Delete</button></td><br></tr>"
+        }
+        bang = bang + k + "</table>"
+        document.getElementById("display").innerHTML = bang
+    }
+
+    function add() {
+        sanpham.push(document.getElementById("addnew").value)
+        document.getElementById("addnew").innerText = ""
+        display()
+    }
+
+    function edit(x) {
+        let nhapmoi = prompt("Bạn hãy sửa lại tên sản phẩm" + sanpham[x])
+        sanpham[x] = nhapmoi
+        display()
+    }
+
+    function deleteProduct(x) {
+        let xacnhan = confirm("Bạn có chắc muốn xóa sản phầm " + sanpham[x])
+        if (xacnhan) {
+            sanpham.splice(x, 1)
+            display()
+        }
+    }
+
+    display()
+</script>
 </html>

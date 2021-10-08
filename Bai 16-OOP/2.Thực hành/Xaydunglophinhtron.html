@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class hinhtron {
+      constructor(radius,color) {
+          this.radius = radius;
+          this.color = color
+      }
+      getRadius(){
+          return this.radius
+      }
+      getArea(){
+          let S = Math.PI*this.radius*this.radius
+          return S
+      }
+  }
+  let myCircle = new hinhtron(2)
+  let k = myCircle.getRadius()
+  let dientich= myCircle.getArea()
+  document.write("Hình tròn bán kính "+k+ " có diện tích là " + dientich)
+</script>
+</body>
+</html>

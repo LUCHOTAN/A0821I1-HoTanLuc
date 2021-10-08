@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="200px" height="200px"></canvas>
+<script>
+    class Rectangle {
+        constructor(chieudai, chieurong) {
+            this.chieudai = chieudai;
+            this.chieurong = chieurong
+        }
+
+        area() {
+            let S = this.chieudai * this.chieurong
+            document.write("Diện tích hình chữ nhật là " + S)
+        }
+
+        getChieudai() {
+            return this.chieudai
+        }
+
+        getChieurong() {
+            return this.chieurong
+        }
+
+        setChieudai(a) {
+            this.chieudai = a
+        }
+
+        setChieurong(b) {
+            this.chieurong = b
+        }
+
+        vehinh() {
+            let c = document.getElementById("canvas")
+            let ctx = c.getContext("2d")
+            ctx.moveTo(50, 50);
+            ctx.lineTo(50 + this.chieudai, 50);
+            ctx.moveTo(50 + this.chieudai, 50);
+            ctx.lineTo(50 + this.chieudai, 50 + this.chieurong);
+            ctx.moveTo(50 + this.chieudai, 50 + this.chieurong);
+            ctx.lineTo(50, 50+this.chieurong)
+            ctx.moveTo(50, 50 + this.chieurong);
+            ctx.lineTo(50, 50)
+            ctx.stroke();
+        }
+    }
+
+    let myRectangle = new Rectangle(100, 40)
+    myRectangle.area()
+    myRectangle.vehinh()
+    myRectangle.setChieurong(60)
+    myRectangle.vehinh()
+
+</script>
+</body>
+</html>
