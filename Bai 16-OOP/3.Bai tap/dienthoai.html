@@ -6,7 +6,36 @@
 </head>
 <body>
 <script>
-
+class dienthoai {
+    constructor() {
+        this.pin = 100
+        this.sentMessage = []
+        this.receivedMessage = []
+        this.onoff = false
+    }
+    turnon(){
+        this.onoff = true
+    }
+    turnoff(){
+        this.onoff = false
+    }
+    sendMessage(message,differenceMobile) {
+        if(this.onoff === true){
+            this.sentMessage.push(message)
+            differenceMobile.receivedMessage.push(message)
+            this.pin--
+        }
+        else {
+            alert("Bạn chưa bật điện thoại")
+        }
+    }
+}
+let iphone = new dienthoai()
+let samsung = new dienthoai()
+iphone.turnon()
+iphone.sendMessage("Xin chào",samsung)
+document.write(iphone.sentMessage)
+document.write(samsung.receivedMessage)
 </script>
 </body>
 </html>
