@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sum(array,m,n){
+        let min = array[0][0]
+        let max = array[0][0]
+        for (let i=0;i<m;i++){
+            for(let j =0;j<n;j++) {
+                if(array[i][j]>max){
+                    max = array[i][j]
+                }
+                if(array[i][j]<min){
+                    min = array[i][j]
+                }
+            }
+        }
+        alert("Số lớn nhất là " + max+ " Số nhỏ nhất là "+min)
+    }
+    let m = parseInt(prompt("Nhập số hàng của ma trận"))
+    let n = parseInt(prompt("Nhập số cột của ma trận"))
+    let myArray = new Array(m)
+    for(let l=0;l<m;l++){
+        myArray[l]=new Array(n)
+    }
+    for (let i=0;i<m;i++){
+        for(let j=0;j<n;j++){
+            myArray[i][j] = parseInt(prompt("Nhập vào phần tử có chỉ số ["+i+"]["+j+"]"))
+        }
+    }
+    sum(myArray,m,n)
+</script>
+</body>
+</html>

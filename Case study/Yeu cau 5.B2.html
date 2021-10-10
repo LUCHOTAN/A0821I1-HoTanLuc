@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function count(array, m, n) {
+        let count = 0
+        let arrayNguyenTo = new Array()
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                if (array[i][j] === 2) {
+                    count = count + 1
+                    arrayNguyenTo.push(array[i][j])
+                }
+                if (array[i][j] > 2) {
+                    let l = 0
+                    for (let k = 2; k < array[i][j]; k++) {
+                        if (array[i][j] % k === 0) {
+                            l = l + 1
+                        }
+                    }
+                    if (l === 0) {
+                        count = count + 1
+                        arrayNguyenTo.push(array[i][j])
+                    }
+                }
+            }
+        }
+        alert("Số lượng số nguyên tố bạn vừa nhập là  " + count + " Danh sách các số nguyên tố đó là " + arrayNguyenTo.join(","))
+    }
+
+    let m = parseInt(prompt("Nhập số hàng của ma trận"))
+    let n = parseInt(prompt("Nhập số cột của ma trận"))
+    let myArray = new Array(m)
+    for (let l = 0; l < m; l++) {
+        myArray[l] = new Array(n)
+    }
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            myArray[i][j] = parseInt(prompt("Nhập vào phần tử có chỉ số [" + i + "][" + j + "]"))
+        }
+    }
+    count(myArray, m, n)
+</script>
+
+</body>
+</html>

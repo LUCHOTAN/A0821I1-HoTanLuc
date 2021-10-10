@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function commonCharacterCount(string1, string2){
+        let myArray1= new Array(string1.length)
+        let myArray2= new Array(string2.length)
+        for(let i=0;i<string1.length; i++){
+            myArray1[i] = string1[i]
+        }
+        for(let j=0;j<string2.length;j++){
+            myArray2[j] = string2[j]
+        }
+        let count = 0
+        for(let k=0;k<myArray1.length;k++){
+            let l = myArray2.indexOf(myArray1[k])
+            if(l != -1){
+                count = count + 1
+                myArray2.splice(l,1)
+            }
+        }
+        alert("Số lượng ký tự chung của 2 chuỗi bạn nhập là "+ count)
+    }
+    let myString1= prompt("Nhập vào chuỗi thứ nhất")
+    let myString2= prompt("Nhập vào chuỗi thứ hai")
+    commonCharacterCount(myString1,myString2)
+</script>
+</body>
+</html>
