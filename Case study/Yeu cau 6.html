@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>XỔ SỐ VIETLOT</h1>
+<H2>MỜI BẠN CHỌN SỐ</H2>
+<select id="1">
+    <script>
+        for (let i = 0; i < 100; i++) {
+            document.write("<option>" + i + "</option>")
+        }
+    </script>
+</select>
+<select id="2">
+    <script>
+        for (let i = 0; i < 100; i++) {
+            document.write("<option>" + i + "</option>")
+        }
+    </script>
+</select>
+<select id="3">
+    <script>
+        for (let i = 0; i < 100; i++) {
+            document.write("<option>" + i + "</option>")
+        }
+    </script>
+</select>
+<select id="4">
+    <script>
+        for (let i = 0; i < 100; i++) {
+            document.write("<option>" + i + "</option>")
+        }
+    </script>
+</select>
+<select id="5">
+    <script>
+        for (let i = 0; i < 100; i++) {
+            document.write("<option>" + i + "</option>")
+        }
+    </script>
+</select>
+<select id="6">
+    <script>
+        for (let i = 0; i < 100; i++) {
+            document.write("<option>" + i + "</option>")
+        }
+    </script>
+</select>
+<br><br>
+<button onclick="xemDaySo()">Xem dãy số của bạn</button>
+<h2 id="dayso">Dãy số của bạn</h2>
+<button onclick="xemKetQua()">Xem dãy số trúng thưởng</button>
+<h2 id="KQ">DÃY SỐ TRÚNG THƯỞNG</h2>
+<h2 id="Thongbao">THÔNG BÁO KẾT QUẢ TRÚNG THƯỞNG</h2>
+<script>
+    function xemDaySo() {
+        let daySo = document.getElementById("1").value.toString() +
+            " " + document.getElementById("2").value.toString() +
+            " " + document.getElementById("3").value.toString() +
+            " " + document.getElementById("4").value.toString() +
+            " " + document.getElementById("5").value.toString() +
+            " " + document.getElementById("6").value.toString();
+
+        document.getElementById("dayso").innerText = daySo;
+        return daySo;
+    }
+
+    function xemKetQua() {
+        let n1 = Math.round(Math.random() * 99)
+        let n2 = Math.round(Math.random() * 99)
+        let n3 = Math.round(Math.random() * 99)
+        let n4 = Math.round(Math.random() * 99)
+        let n5 = Math.round(Math.random() * 99)
+        let n6 = Math.round(Math.random() * 99)
+        document.getElementById("KQ").innerText = n1.toString() + " " +
+            n2.toString() + " " + n3.toString() + " " + n4.toString() + " " +
+            n5.toString() + " " + n6.toString()
+        let dayChon = xemDaySo()
+        xemDaySo();
+        let myArray = dayChon.split(" ")
+        if (myArray[0] == n1 && myArray[1] == n2 && myArray[2] == n3 && myArray[3] == n4 && myArray[4] == n5 && myArray[5] == n6) {
+            document.getElementById("Thongbao").innerText = "Chúc mừng bạn đã trúng giải đặc biệt 1 tỷ đồng"
+        } else if (myArray[1] == n2 && myArray[2] == n3 && myArray[3] == n4 && myArray[4] == n5 && myArray[5] == n6) {
+            document.getElementById("Thongbao").innerText = "Chúc mừng bạn đã trúng giải nhì 100 triệu đồng"
+        } else if (myArray[3] == n4 && myArray[4] == n5 && myArray[5] == n6) {
+            document.getElementById("Thongbao").innerText = "Chúc mừng bạn đã trúng giải khuyến khích 30 triệu đồng"
+        } else {
+            document.getElementById("Thongbao").innerText = "Chúc bạn may mắn lần sau"
+        }
+
+    }
+
+</script>
+</body>
+</html>

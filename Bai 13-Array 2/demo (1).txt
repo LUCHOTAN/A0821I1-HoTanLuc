@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // let str = "tran   minh   chien"
+    // let arr = str.split(" ");
+    // console.log(arr);
+    //
+    // for (let i = 0; i < arr.length; i++){
+    //     if (arr[i] === ""){
+    //         arr.splice(i, 1);
+    //         i--;
+    //     }
+    // }
+    // console.log(arr);
+    //Nếu size > 10 thì bắt người dùng nhập lại.
+    // let size;
+    // let arr = [];
+    // do {
+    //     size = parseInt(prompt("Nhập kích thước của mảng:"));
+    // } while (size > 10)
+    //
+    // for (let i = 0; i < size; i++){
+    //     arr[i] = parseInt(prompt("Nhập giá trị tại vị trí:" + i))
+    // }
+    // console.log(arr)
+    //
+    // let v = parseInt(prompt("Nhập phần tử muốn tìm V: "));
+    //
+    // for (let i = 0; i < size; i++){
+    //     if (v === arr[i]){
+    //         for (let j = i; j < size - 1; j++ ){
+    //             arr[j] = arr[j + 1];
+    //         }
+    //     }
+    // }
+    // arr[arr.length-1] = 0;
+    // console.log(arr)
+
+
+</script>
+</html>
